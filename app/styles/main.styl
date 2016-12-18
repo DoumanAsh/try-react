@@ -1,0 +1,30 @@
+*
+    box-sizing: border-box;
+
+div.container
+    display: flex
+    flex-direction: row
+
+    & > * div#content
+        width: 480px
+        margin: 0 auto
+
+    & > div#todo
+        & > div#content
+            & > ul
+                padding: 0
+                list-style-type: none
+                & > li
+                    & > label.inactive
+                        text-decoration: line-through
+                    & > * input
+                        margin-right: 0.5rem
+
+a
+    color: #3f894a
+    text-decoration: none
+    border-bottom: 1px solid rgba(0, 0, 0, 0)
+
+a:hover
+    color: #27552e
+    border-bottom: 1px solid #27552e
