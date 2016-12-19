@@ -1,25 +1,5 @@
 *
     box-sizing: border-box;
-
-div.container
-    display: flex
-    flex-direction: row
-
-    & > * div#content
-        width: 480px
-        margin: 0 auto
-
-    & > div#todo
-        & > div#content
-            & > ul
-                padding: 0
-                list-style-type: none
-                & > li
-                    & > label.inactive
-                        text-decoration: line-through
-                    & > * input
-                        margin-right: 0.5rem
-
 a
     color: #3f894a
     text-decoration: none
@@ -28,3 +8,14 @@ a
 a:hover
     color: #27552e
     border-bottom: 1px solid #27552e
+
+div#app
+    display: flex
+    position: fixed
+    bottom: 0
+    top: 0
+    left: 0
+    right: 0
+
+    & > div
+        margin-right: 0.5rem
