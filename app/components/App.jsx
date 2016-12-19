@@ -3,7 +3,7 @@ import React from 'react';
 import Timer from 'components/Timer.jsx';
 import Todo from 'components/Todo.jsx';
 
-import { Router, IndexRoute, Link, Route, browserHistory } from 'react-router';
+import { Router, IndexRoute, Link, Route, hashHistory } from 'react-router';
 
 class Home extends React.Component {
     render() {
@@ -42,7 +42,7 @@ App.propTypes = {
 
 export default function() {
     ReactDOM.render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
             <Route path="todo" component={Todo}/>
