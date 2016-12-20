@@ -5,6 +5,24 @@ div#content
     color: #666
     font-family: sans-serif
 
+    & > div.market
+        text-align: left
+        & > h1
+            margin: 0.5rem
+        & > div.shop
+            & > div.market_header
+                background: #333
+                color: white
+
+            & > div.market_item
+            & > div.market_header
+                border: 1px solid
+                display: flex
+                width: 25%
+                justify-content: space-between
+
+                & > p
+                    padding: 0.5rem
     & > ul
         padding: 0
         & > li

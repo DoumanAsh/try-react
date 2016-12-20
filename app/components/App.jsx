@@ -2,24 +2,22 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Timer from 'components/Timer.jsx';
 import Todo from 'components/Todo.jsx';
+import * as market from 'components/Market.jsx';
 
 import { Router, IndexRoute, Link, Route, hashHistory } from 'react-router';
 
-class Home extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Trying out react.js</h1>
-            </div>
-        );
-    }
-}
+let Home = ({isNum}) => (
+    <div>
+        <h1>Trying out react.js</h1>
+    </div>
+)
 
 class App extends React.Component {
     render() {
         const routes = [
             'Todo',
-            'Timer'
+            'Timer',
+            'Market'
         ];
         return (
             <div id="app">
@@ -35,7 +33,6 @@ class App extends React.Component {
             );
     }
 }
-
 App.propTypes = {
     children: React.PropTypes.element.isRequired
 };
@@ -46,7 +43,11 @@ export default function() {
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
             <Route path="todo" component={Todo}/>
-            <Route path="Timer" component={Timer}/>
+            <Route path="timer" component={Timer}/>
+            <Route path="market" component={market.Main}>
+                <IndexRoute component={market.Home}/>
+                <Route path="checkout" component={market.Checkout}/>
+            </Route>
         </Route>
     </Router>
     ), document.getElementById('main'));
