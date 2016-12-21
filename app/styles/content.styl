@@ -15,6 +15,9 @@ div#content
                 color: white
 
             & > div.market_item
+                cursor: pointer
+
+            & > div.market_item
             & > div.market_header
                 border: 1px solid
                 display: flex
@@ -23,6 +26,46 @@ div#content
 
                 & > p
                     padding: 0.5rem
+
+        & > div.checkout
+            & > div.total
+            & > div.checkout_item
+                padding: .2rem
+                display: flex
+                word-wrap: break-word
+                align-items: center
+                border: 1px solid
+                justify-content: space-between
+                width: 25%
+
+                & > p
+                    flex: 1 1 25%
+                    word-wrap: break-word
+                    padding: 0.5rem
+
+
+                & > div.quantity
+                    flex: 1 1 5%
+                    display: flex
+                    & > p.quantity
+                        flex: 1 0 60%
+                    & > div.change
+                        & > p
+                            font-size: 50%
+                            cursor:pointer
+                            color:green
+
+            & > div.total
+                background: #333
+                color: teal
+                & > p.total
+                    flex: 1 1 75%
+                & > p.sum
+                    text-align: right
+                    flex: 1 1 25%
+
+
+
     & > ul
         padding: 0
         & > li

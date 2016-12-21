@@ -6,11 +6,11 @@ import * as market from 'components/Market.jsx';
 
 import { Router, IndexRoute, Link, Route, hashHistory } from 'react-router';
 
-let Home = ({isNum}) => (
+let Home = () => (
     <div>
         <h1>Trying out react.js</h1>
     </div>
-)
+);
 
 class App extends React.Component {
     render() {
